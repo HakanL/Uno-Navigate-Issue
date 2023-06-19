@@ -26,6 +26,8 @@
 			<Button Content="Go to Second Page"
 					AutomationProperties.AutomationId="SecondPageButton"
 					Command="{Binding GoToSecond}" />
-		</StackPanel>
+
+            <Button Content="Display overlay" Command="{Binding DisplayOverlay}"/>
+        </StackPanel>
 	</Grid>
 </Page>

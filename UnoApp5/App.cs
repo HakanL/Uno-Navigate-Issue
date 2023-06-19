@@ -62,6 +62,7 @@ namespace UnoApp5
             views.Register(
                 new ViewMap(ViewModel: typeof(ShellViewModel)),
                 new ViewMap<MainPage, MainViewModel>(),
+                new ViewMap<OverlayPage>(),
                 new DataViewMap<SecondPage, SecondViewModel, Entity>()
             );
 
@@ -71,6 +72,7 @@ namespace UnoApp5
                     {
                     new RouteMap("Main", View: views.FindByViewModel<MainViewModel>()),
                     new RouteMap("Second", View: views.FindByViewModel<SecondViewModel>()),
+                    new RouteMap("Overlay", View: views.FindByView<OverlayPage>()),
                     }
                 )
             );
