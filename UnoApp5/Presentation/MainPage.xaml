@@ -28,6 +28,7 @@
 					Command="{Binding GoToSecond}" />
 
             <Button Content="Display overlay" Command="{Binding DisplayOverlay}"/>
+            <Button Content="Grouped ListView" Command="{Binding GoToGroupedListViewDemo}"/>
         </StackPanel>
 	</Grid>
 </Page>
