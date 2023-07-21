@@ -63,6 +63,7 @@ namespace UnoApp5
                 new ViewMap(ViewModel: typeof(ShellViewModel)),
                 new ViewMap<MainPage, MainViewModel>(),
                 new ViewMap<GroupedListViewPage, GroupedListViewViewModel>(),
+                new ViewMap<ListViewPage, ListViewViewModel>(),
                 new ViewMap<OverlayPage>(),
                 new DataViewMap<SecondPage, SecondViewModel, Entity>()
             );
@@ -74,6 +75,7 @@ namespace UnoApp5
                     new RouteMap("Main", View: views.FindByViewModel<MainViewModel>()),
                     new RouteMap("Second", View: views.FindByViewModel<SecondViewModel>()),
                     new RouteMap("GroupedListView", View: views.FindByViewModel<GroupedListViewViewModel>()),
+                    new RouteMap("ListView", View: views.FindByViewModel<ListViewViewModel>()),
                     new RouteMap("Overlay", View: views.FindByView<OverlayPage>()),
                     }
                 )

@@ -15,6 +15,7 @@ namespace UnoApp5.Presentation
             GoToSecond = new AsyncRelayCommand(GoToSecondView);
             DisplayOverlay = new AsyncRelayCommand(DisplayOverlayView);
             GoToGroupedListViewDemo = new AsyncRelayCommand(GoToGroupedListView);
+            GoToListViewDemo = new AsyncRelayCommand(GoToListView);
         }
         public string? Title { get; }
 
@@ -23,6 +24,8 @@ namespace UnoApp5.Presentation
         public ICommand DisplayOverlay { get; }
 
         public ICommand GoToGroupedListViewDemo { get; }
+
+        public ICommand GoToListViewDemo { get; }
 
 
         private async Task GoToSecondView()
@@ -33,6 +36,11 @@ namespace UnoApp5.Presentation
         private async Task GoToGroupedListView()
         {
             await _navigator.NavigateViewModelAsync<GroupedListViewViewModel>(this, data: new Entity(Name!));
+        }
+
+        private async Task GoToListView()
+        {
+            await _navigator.NavigateViewModelAsync<ListViewViewModel>(this);
         }
 
         private async Task DisplayOverlayView()

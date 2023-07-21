@@ -10,25 +10,26 @@
 	NavigationCacheMode="Required"
 	Background="{ThemeResource BackgroundBrush}">
 
-	<Grid utu:SafeArea.Insets="All">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" />
-			<RowDefinition />
-		</Grid.RowDefinitions>
-		<utu:NavigationBar Content="{Binding Title}" />
+    <Grid utu:SafeArea.Insets="All">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <utu:NavigationBar Content="{Binding Title}" />
 
-		<StackPanel Grid.Row="1"
+        <StackPanel Grid.Row="1"
 					HorizontalAlignment="Center"
 					VerticalAlignment="Center"
 					Spacing="16">
-			<TextBox Text="{Binding Name, Mode=TwoWay}"
+            <TextBox Text="{Binding Name, Mode=TwoWay}"
 					 PlaceholderText="Enter your name:" />
-			<Button Content="Go to Second Page"
+            <Button Content="Go to Second Page"
 					AutomationProperties.AutomationId="SecondPageButton"
 					Command="{Binding GoToSecond}" />
 
             <Button Content="Display overlay" Command="{Binding DisplayOverlay}"/>
             <Button Content="Grouped ListView" Command="{Binding GoToGroupedListViewDemo}"/>
+            <Button Content="ListView" Command="{Binding GoToListViewDemo}"/>
         </StackPanel>
-	</Grid>
+    </Grid>
 </Page>
