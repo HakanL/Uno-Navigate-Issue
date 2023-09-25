@@ -64,7 +64,10 @@ namespace UnoApp5
                 new ViewMap<MainPage, MainViewModel>(),
                 new ViewMap<GroupedListViewPage, GroupedListViewViewModel>(),
                 new ViewMap<ListViewPage, ListViewViewModel>(),
+                new ViewMap<ListViewScrollPage, ListViewViewScrollModel>(),
+                new ViewMap<CheckboxPage, CheckboxViewModel>(),
                 new ViewMap<OverlayPage>(),
+                new ViewMap<TestContentDialog>(),
                 new DataViewMap<SecondPage, SecondViewModel, Entity>()
             );
 
@@ -76,6 +79,9 @@ namespace UnoApp5
                     new RouteMap("Second", View: views.FindByViewModel<SecondViewModel>()),
                     new RouteMap("GroupedListView", View: views.FindByViewModel<GroupedListViewViewModel>()),
                     new RouteMap("ListView", View: views.FindByViewModel<ListViewViewModel>()),
+                    new RouteMap("ListViewScroll", View: views.FindByViewModel<ListViewViewScrollModel>()),
+                    new RouteMap("TestContentDialog", View: views.FindByView<TestContentDialog>()),
+                    new RouteMap("Checkbox", View: views.FindByViewModel<CheckboxViewModel>()),
                     new RouteMap("Overlay", View: views.FindByView<OverlayPage>()),
                     }
                 )

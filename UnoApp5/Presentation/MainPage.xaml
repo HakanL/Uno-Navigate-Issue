@@ -30,6 +30,9 @@
             <Button Content="Display overlay" Command="{Binding DisplayOverlay}"/>
             <Button Content="Grouped ListView" Command="{Binding GoToGroupedListViewDemo}"/>
             <Button Content="ListView" Command="{Binding GoToListViewDemo}"/>
+            <Button Content="ListViewScroll" Command="{Binding GoToListViewScrollDemo}"/>
+            <Button Content="Checkbox" Command="{Binding GoToCheckboxDemo}"/>
+            <Button Content="Dialog" Command="{Binding DisplayContentDialog}"/>
         </StackPanel>
     </Grid>
 </Page>
